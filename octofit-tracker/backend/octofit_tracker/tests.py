@@ -18,7 +18,7 @@ class ActivityModelTest(TestCase):
         self.assertEqual(activity.activity_type, 'Running')
 
 class LeaderboardModelTest(TestCase):
-    def test_leaderboard_creation(self):
+    def test_leaderboard_entry_creation(self):
         user = User.objects.create(username='testuser', email='testuser@example.com', password='password')
         leaderboard = Leaderboard.objects.create(user=user, score=100)
         self.assertEqual(leaderboard.score, 100)
